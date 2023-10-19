@@ -111,7 +111,7 @@ void swap(stack_t **stack, unsigned int line_number)
 	len = stack_len(head);
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		free_all(*stack);
 		exit(EXIT_FAILURE);
 	}

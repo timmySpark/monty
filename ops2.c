@@ -33,7 +33,7 @@ void monty_div(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	stack_1 = num_at_index(stack_one, 1);
-	result = stack_1 - stack_0;
+	result = stack_1 / stack_0;
 
 	delete_stack_at_index(stack, 0);
 	delete_stack_at_index(stack, 0);
@@ -122,7 +122,6 @@ void mod(stack_t **stack, unsigned int line_number)
  *
  * Return: Exit Failure
  */
-
 void add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *val1 = *stack, *val2 = *stack;
