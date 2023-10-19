@@ -5,6 +5,7 @@ push 20
 push 15
 add
 pall
+pall
 # Comment
     push 67    $
 pstr

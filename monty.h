@@ -16,7 +16,9 @@
 	{"mod", mod}, \
 	{"add", add}, \
 	{"pchar", pchar}, \
-	{"pstr", pstr} \
+	{"pstr", pstr}, \
+	{"rotl", rotl}, \
+	{"rotr", rotr}, \
 }
 
 #include <stdlib.h>
@@ -103,6 +105,8 @@ void mul(stack_t **stack, unsigned int line_number);
 void mod(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
 void pchar(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number);
+void rotr(stack_t **stack, unsigned int line_number);
 
 
 int delete_stack_at_index(stack_t **head, unsigned int index);
