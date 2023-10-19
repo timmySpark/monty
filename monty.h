@@ -48,6 +48,7 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
+<<<<<<< HEAD
  * struct Commands - Contains command-related data.
  * @lines: Array of lines to store lines from input
  * @buffer: Total number of argument:ws
@@ -56,6 +57,15 @@ typedef struct instruction_s
  * @num: Index of the new environment variables array
  */
 
+=======
+ * struct commands - Holds command information
+ * @lines: Lines of command
+ * @buffer: To hold read bytes
+ * @line_count: Counts lines
+ * @args: Holds arguments
+ * @num: Number
+ */
+>>>>>>> edf53605dbd8797dfcf1a23f2ac109a708d0eab2
 typedef struct commands
 {
 	char *lines[MAX_LINES];
@@ -82,8 +92,8 @@ int pint_err(unsigned int line_number);
 int pop_err(unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
-void sub(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
+void sub(stack_t **stack, unsigned int line_number);
 void monty_pint(stack_t **stack, unsigned int line_no);
 void monty_pop(stack_t **stack, unsigned int line_no);
 void monty_nop(stack_t **stack, unsigned int line_no);
@@ -98,4 +108,3 @@ int stack_len(stack_t *h);
 
 
 #endif /* MONTY_H */
-

@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * executer - 
+ * executer - Tokenizes, pairs and executes commands
  *
  */
 
@@ -42,4 +42,3 @@ line_number, cmds->args[0]);
 	}
 	free_stack(stack);
 }
-
