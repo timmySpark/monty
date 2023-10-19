@@ -143,8 +143,5 @@ void add(stack_t **stack, unsigned int line_number)
 	sum = num1 + num2;
 
 	delete_stack_at_index(stack, 0);
-	delete_stack_at_index(stack, 0);
-
-	cmds->num = sum;
-	push(stack, line_number);
+	(*stack)->n = sum;
 }

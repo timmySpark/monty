@@ -1,19 +1,30 @@
-push  0 jsj keke 
-push 2
+push  90 jsj keke 
+push 20
                    pall    $        
 
-
-
-push 4
+push 15
 add
+pall
+
+    push 67    $
+pstr
+
+      push    50       $
+
+
+		add
+		pall
 pint
+		pchar
+pstr
+	push 56
 
-    push 5    $
+	push 	87
+push 72
 
-
-      push    6        $
-
-		mul
+push 86
+pstr
+	
 pall This is the end of our program. Monty is awesome!
 
 uh
