@@ -2,13 +2,10 @@
 #include <string.h>
 
 /**
- *
- *
- *
- *
- *
+ * executer - 
  *
  */
+
 void executer(void)
 {
 	int i = 0, line_number = 1;

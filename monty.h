@@ -24,6 +24,7 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
+
 typedef struct stack_s
 {
 	int n;
@@ -39,11 +40,21 @@ typedef struct stack_s
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO
  */
+
 typedef struct instruction_s
 {
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/**
+ * struct Commands - Contains command-related data.
+ * @lines: Array of lines to store lines from input
+ * @buffer: Total number of argument:ws
+ * @line_count: Indicates whether the input came from a terminal or not
+ * @args: Status indicating if the command path was found
+ * @num: Index of the new environment variables array
+ */
 
 typedef struct commands
 {
@@ -82,7 +93,7 @@ void mod(stack_t **stack, unsigned int line_number);
 
 
 int delete_stack_at_index(stack_t **head, unsigned int index);
-int num_at_index(stack_t* stack, unsigned int index);
+int num_at_index(stack_t *stack, unsigned int index);
 int stack_len(stack_t *h);
 
 

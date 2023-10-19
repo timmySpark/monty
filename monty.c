@@ -1,7 +1,17 @@
 #include "monty.h"
 #include <stdio.h>
 
+
 cmd_t *cmds = NULL;
+
+/**
+ * main - executes monty code
+ * @argc: Argument Count
+ * @argv: Argument Vector
+ *
+ * Return: always 0
+ */
+
 int main(int argc, char *argv[])
 {
 	int i = 0;
