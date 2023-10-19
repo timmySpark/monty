@@ -1,11 +1,19 @@
-push 3
-push 10
-push 5
-div
-pint
-push 9
+push  0 jsj keke 
+push 2
+                   pall    $        
+
+
+
 push 4
-mul
+add
 pint
-pop
-pint
+
+    push 5    $
+
+
+      push    6        $
+
+		mul
+pall This is the end of our program. Monty is awesome!
+
+uh

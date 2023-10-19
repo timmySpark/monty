@@ -14,8 +14,6 @@ void push(stack_t **stack, unsigned int line_number)
 	stack_t *newNode;
 
 	(void)line_number;
-	if (!cmds->num)
-		return;
 
 	newNode = malloc(sizeof(stack_t));
 	if (!newNode)
@@ -48,7 +46,6 @@ void push(stack_t **stack, unsigned int line_number)
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
-	size_t count = 0;
 	stack_t *current;
 
 	(void)line_number;
@@ -59,7 +56,6 @@ void pall(stack_t **stack, unsigned int line_number)
 	while (current != NULL)
 	{
 		printf("%d\n", current->n);
-		count++;
 		current = current->next;
 	}
 }

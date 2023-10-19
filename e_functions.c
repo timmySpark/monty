@@ -39,7 +39,8 @@ void check_op(stack_t **stack, int line_number)
 		{"sub", sub},
 		{"mul", mul},
 		{"div", monty_div},
-		{"mod", mod}
+		{"mod", mod},
+		{"add", add}
 	};
 	void (*executor)(stack_t **stack, unsigned int line_number) = NULL;
 
