@@ -48,16 +48,6 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
-<<<<<<< HEAD
- * struct Commands - Contains command-related data.
- * @lines: Array of lines to store lines from input
- * @buffer: Total number of argument:ws
- * @line_count: Indicates whether the input came from a terminal or not
- * @args: Status indicating if the command path was found
- * @num: Index of the new environment variables array
- */
-
-=======
  * struct commands - Holds command information
  * @lines: Lines of command
  * @buffer: To hold read bytes
@@ -65,7 +55,7 @@ typedef struct instruction_s
  * @args: Holds arguments
  * @num: Number
  */
->>>>>>> edf53605dbd8797dfcf1a23f2ac109a708d0eab2
+
 typedef struct commands
 {
 	char *lines[MAX_LINES];
