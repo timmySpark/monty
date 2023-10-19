@@ -24,7 +24,7 @@ void executer(void)
 		{
 			if (cmds->args[1] == NULL)
 			{
-				fprintf(stderr, "L%d: usage: push integer\n",line_number);
+				fprintf(stderr, "L%d: usage: push integer\n", line_number);
 				free_all(stack);
 				exit(EXIT_FAILURE);
 			}
