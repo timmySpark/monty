@@ -45,6 +45,14 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct commands - Holds command information
+ * @lines: Lines of command
+ * @buffer: To hold read bytes
+ * @line_count: Counts lines
+ * @args: Holds arguments
+ * @num: Number
+ */
 typedef struct commands
 {
 	char *lines[MAX_LINES];
@@ -71,8 +79,8 @@ int pint_err(unsigned int line_number);
 int pop_err(unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
-void sub(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
+void sub(stack_t **stack, unsigned int line_number);
 void monty_pint(stack_t **stack, unsigned int line_no);
 void monty_pop(stack_t **stack, unsigned int line_no);
 void monty_nop(stack_t **stack, unsigned int line_no);
@@ -82,9 +90,8 @@ void mod(stack_t **stack, unsigned int line_number);
 
 
 int delete_stack_at_index(stack_t **head, unsigned int index);
-int num_at_index(stack_t* stack, unsigned int index);
+int num_at_index(stack_t *stack, unsigned int index);
 int stack_len(stack_t *h);
 
 
 #endif /* MONTY_H */
-

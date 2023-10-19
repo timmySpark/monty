@@ -6,7 +6,6 @@
 /**
  * pint_err - an error that is fired if stack is empty
  * @line_number: line number
- * 
  * Return: Exit Failure
  */
 int pint_err(unsigned int line_number)
@@ -18,7 +17,6 @@ int pint_err(unsigned int line_number)
 /**
  * pop_err - an error that is fired if stack is empty
  * @line_number: line number
- * 
  * Return: Exit Failure
  */
 int pop_err(unsigned int line_number)
@@ -71,4 +69,3 @@ void monty_nop(stack_t **stack, unsigned int line_number)
 	(void) (*stack);
 	(void) (line_number);
 }
-

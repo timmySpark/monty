@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 /**
- *add_dnodeint - Adds new node at the head of a dlistint_t list
- *@head: Pointer to Pointer to first node
+ *push - Adds new node at the head of a dlistint_t list
+ *@stack: Pointer to Pointer to first node
  *@line_number: Line number
  *
  *Return: Nothing
@@ -39,9 +39,9 @@ void push(stack_t **stack, unsigned int line_number)
 }
 
 /**
- *print_dlistint - Prints data in a dlistint_t list
- *@h: Head of list
- *
+ *pall - Prints data in a dlistint_t list
+ *@stack: Head of list
+ *@line_number: Line number
  *
  *
  *Return: Number of node
@@ -65,9 +65,9 @@ void pall(stack_t **stack, unsigned int line_number)
 }
 
 /**
- *
- *
- *
+ *sub - Subtracts top node from second to top node
+ *@stack: Stack list
+ *@line_number: Line number
  *
  *
  */
@@ -89,7 +89,7 @@ void sub(stack_t **stack, unsigned int line_number)
 	stack_0 = num_at_index(stack_zero, 0);
 	stack_1 = num_at_index(stack_one, 1);
 	result = stack_1 - stack_0;
-	
+
 	delete_stack_at_index(stack, 0);
 	delete_stack_at_index(stack, 0);
 
@@ -99,9 +99,9 @@ void sub(stack_t **stack, unsigned int line_number)
 
 
 /**
- *
- *
- *
+ *swap - Swap top values in stack
+ *@stack: Pointer to pointer to stack_t list
+ *@line_number: Line number
  *
  *
  *
@@ -129,4 +129,3 @@ void swap(stack_t **stack, unsigned int line_number)
 	cmds->num = next;
 	push(stack, line_number);
 }
-
