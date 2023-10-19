@@ -20,7 +20,7 @@ void executer(void)
 		cmds->args[0] = NULL;
 		cmds->args[1] = NULL;
 		tokenizer(i);
-		if (cmds->args[0] == NULL)
+		if (cmds->args[0] == NULL || cmds->args[0][0] == '#')
 		{
 			line_number++;
 			continue;
