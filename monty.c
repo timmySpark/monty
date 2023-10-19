@@ -2,16 +2,13 @@
 #include <stdio.h>
 
 cmd_t *cmds = NULL;
-
-
 /**
  * main - Entry point
- * @argc: Argument Count
- * @argv: Argument Vector
+ * @argc: Argument count
+ * @argv: Argument vector
  *
  * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
 	int i = 0;

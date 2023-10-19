@@ -30,17 +30,7 @@ void check_op(stack_t **stack, int line_number)
 {
 	unsigned long int j;
 
-	instruction_t ops[] = {
-		{"push", push},
-		{"pall", pall},
-		{"pint", monty_pint},
-		{"pop", monty_pop},
-		{"nop", monty_nop},
-		{"sub", sub},
-		{"mul", mul},
-		{"div", monty_div},
-		{"mod", mod}
-	};
+	instruction_t ops[] = OP_FUNCTIONS;
 	void (*executor)(stack_t **stack, unsigned int line_number) = NULL;
 
 	for (j = 0; j < sizeof(ops) / sizeof(ops[0]); j++)

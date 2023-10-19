@@ -6,10 +6,8 @@
 /**
  * pint_err - an error that is fired if stack is empty
  * @line_number: line number
- *
  * Return: Exit Failure
  */
-
 int pint_err(unsigned int line_number)
 {
 	fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
@@ -19,10 +17,8 @@ int pint_err(unsigned int line_number)
 /**
  * pop_err - an error that is fired if stack is empty
  * @line_number: line number
- *
  * Return: Exit Failure
  */
-
 int pop_err(unsigned int line_number)
 {
 	fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
@@ -34,7 +30,6 @@ int pop_err(unsigned int line_number)
  * @stack: struct_t stack
  * @line_number: line number
  */
-
 void monty_pint(stack_t **stack, unsigned int line_number)
 {
 	if ((*stack) == NULL)
@@ -53,7 +48,6 @@ void monty_pint(stack_t **stack, unsigned int line_number)
  * @stack: struct_t stack
  * @line_number: line number
  */
-
 void monty_pop(stack_t **stack, unsigned int line_number)
 {
 	if ((*stack) == NULL)
@@ -70,7 +64,6 @@ void monty_pop(stack_t **stack, unsigned int line_number)
  * @stack: struct_t stack
  * @line_number: line number
  */
-
 void monty_nop(stack_t **stack, unsigned int line_number)
 {
 	(void) (*stack);

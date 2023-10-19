@@ -4,6 +4,20 @@
 #define MAX_LINES 1024
 #define MAX_ARGS 2
 #define N_INFINITY 2147483647
+#define OP_FUNCTIONS { \
+	{"push", push}, \
+	{"pall", pall}, \
+	{"pint", monty_pint}, \
+	{"pop", monty_pop}, \
+	{"nop", monty_nop}, \
+	{"sub", sub}, \
+	{"mul", mul}, \
+	{"div", monty_div}, \
+	{"mod", mod}, \
+	{"add", add}, \
+	{"pchar", pchar}, \
+	{"pstr", pstr} \
+}
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -24,7 +38,6 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
-
 typedef struct stack_s
 {
 	int n;
@@ -40,7 +53,6 @@ typedef struct stack_s
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO
  */
-
 typedef struct instruction_s
 {
 	char *opcode;
@@ -55,7 +67,6 @@ typedef struct instruction_s
  * @args: Holds arguments
  * @num: Number
  */
-
 typedef struct commands
 {
 	char *lines[MAX_LINES];
@@ -90,6 +101,8 @@ void monty_nop(stack_t **stack, unsigned int line_no);
 void monty_div(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 void mod(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
 
 
 int delete_stack_at_index(stack_t **head, unsigned int index);

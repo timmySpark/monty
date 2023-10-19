@@ -14,13 +14,12 @@ void push(stack_t **stack, unsigned int line_number)
 	stack_t *newNode;
 
 	(void)line_number;
-	if (!cmds->num)
-		return;
 
 	newNode = malloc(sizeof(stack_t));
 	if (!newNode)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
+		free_all(*stack);
 		exit(EXIT_FAILURE);
 	}
 
@@ -48,7 +47,6 @@ void push(stack_t **stack, unsigned int line_number)
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
-	size_t count = 0;
 	stack_t *current;
 
 	(void)line_number;
@@ -59,7 +57,6 @@ void pall(stack_t **stack, unsigned int line_number)
 	while (current != NULL)
 	{
 		printf("%d\n", current->n);
-		count++;
 		current = current->next;
 	}
 }
@@ -114,7 +111,7 @@ void swap(stack_t **stack, unsigned int line_number)
 	len = stack_len(head);
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		free_all(*stack);
 		exit(EXIT_FAILURE);
 	}
