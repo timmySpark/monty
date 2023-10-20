@@ -1,7 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-#define MAX_LINES 1024
+#define MAX_LINES 4048
 #define MAX_ARGS 2
 #define N_INFINITY 2147483647
 #define OP_FUNCTIONS { \
