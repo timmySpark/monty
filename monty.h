@@ -19,6 +19,7 @@
 	{"pstr", pstr}, \
 	{"rotl", rotl}, \
 	{"rotr", rotr}, \
+	{"swap", swap}, \
 }
 
 #include <stdlib.h>
@@ -68,11 +69,13 @@ typedef struct instruction_s
  * @line_count: Counts lines
  * @args: Holds arguments
  * @num: Number
+ * @buffer2: Second buffer that holds corrected read bytes
  */
 typedef struct commands
 {
 	char *lines[MAX_LINES];
 	char buffer[MAX_LINES];
+	char buffer2[MAX_LINES];
 	int line_count;
 	char *args[MAX_ARGS];
 	int num;
@@ -82,14 +85,14 @@ extern cmd_t *cmds;
 
 void read_code(char *argv_1);
 char *rmv_space(char *cmd);
-void parse(cmd_t *cmds);
+void parse(void);
 void executer(void);
 void free_all(stack_t *stack);
 void free_stack(stack_t *stack);
 void check_op(stack_t **stack, int line_number);
 void tokenizer(int i);
 char *_strdup(char *s);
-
+void add_hash(char *inputString, char *outputString);
 
 int pint_err(unsigned int line_number);
 int pop_err(unsigned int line_number);
@@ -106,6 +109,7 @@ void mod(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
 void pchar(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 void rotr(stack_t **stack, unsigned int line_number);
 
 

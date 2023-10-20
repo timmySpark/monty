@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <stdio.h>
 #include <string.h>
 
 /**
@@ -38,12 +39,8 @@ char *rmv_space(char *cmd)
 /**
  *parse - Splits buffer into lines
  *
- *@cmds: Struct holding lines
- *
- *
- *
  */
-void parse(cmd_t *cmds)
+void parse(void)
 {
 	char *buffer = cmds->buffer;
 	char *token = NULL;
@@ -59,4 +56,44 @@ void parse(cmd_t *cmds)
 		j++;
 	}
 	cmds->line_count = j;
+}
+
+
+#include <stdio.h>
+#include <string.h>
+
+/**
+ * add_hash - Adds '#' between successive newline characters in a string.
+ * @inputString: The input string to be modified.
+ * @outputString: The output string where the modified string is stored.
+ */
+void add_hash(char *inputString, char *outputString)
+{
+	int i, j = 0;
+	int newlineCount = 0;
+
+	for (i = 0; inputString[i] != '\0'; i++)
+	{
+		if (inputString[i] == '\n')
+		{
+			if (newlineCount == 0)
+			{
+				outputString[j++] = inputString[i];
+				newlineCount = 0;
+			}
+			else
+			{
+				outputString[j++] = '\n';
+				outputString[j++] = '#';
+				outputString[j++] = '\n';
+			}
+			newlineCount++;
+		}
+		else
+		{
+			newlineCount = 0;
+			outputString[j++] = inputString[i];
+		}
+	}
+	outputString[j] = '\0';
 }

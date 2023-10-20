@@ -20,7 +20,8 @@ void executer(void)
 		cmds->args[0] = NULL;
 		cmds->args[1] = NULL;
 		tokenizer(i);
-		if (cmds->args[0] == NULL || cmds->args[0][0] == '#')
+		if (cmds->args[0] == NULL || cmds->args[0][0] == '#'
+	|| cmds->args[0][0] == '\0')
 		{
 			line_number++;
 			continue;
@@ -35,7 +36,7 @@ void executer(void)
 			}
 
 			num = (int)strtol(cmds->args[1], &endptr, 10);
-			if (endptr == cmds->args[1])
+			if (endptr == cmds->args[1] || *endptr != '\0')
 			{
 				fprintf(stderr, "L%d: usage: push integer\n",
 line_number);
