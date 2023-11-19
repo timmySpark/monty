@@ -21,7 +21,6 @@ These instructions will help you set up the project locally, for development and
 
 ### Prerequisites
 
-List down the things you need to install beforehand and how to install them.
 
 i. Clone this repo
 
